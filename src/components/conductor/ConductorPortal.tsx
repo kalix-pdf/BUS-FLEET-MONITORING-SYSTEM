@@ -345,6 +345,7 @@ ${label("Payment", ticketData.paymentMethod.toUpperCase())}
           {tripActive ? (
             <>
               <TripActions
+                busInfo={busInfo}
                 passengerCount={getTotalPassengers()}
                 totalRevenue={getTotalRevenue()}
                 onIssueTicket={() => setShowTicketForm(true)}
@@ -368,6 +369,8 @@ ${label("Payment", ticketData.paymentMethod.toUpperCase())}
         />
 
         <TicketFormModal
+          busInfo={busInfo}
+          passengerCount={getTotalPassengers()}
           isOpen={showTicketForm}
           isIssuingTicket={isIssuingTicket}
           isPrintingReceipt={isPrintingReceipt}
