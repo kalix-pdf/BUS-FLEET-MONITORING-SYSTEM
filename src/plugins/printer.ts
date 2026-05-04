@@ -1,7 +1,13 @@
 import { registerPlugin } from "@capacitor/core";
 
 export interface BusPrinterPlugin {
-  printReceipt(options: { text: string; qrText?: string; enableQr?: boolean }): Promise<{
+  printReceipt(options: {
+    text: string;
+    qrText?: string;
+    enableQr?: boolean;
+    headerLines?: string[];
+    footerLines?: string[];
+  }): Promise<{
     success: boolean;
     method?: string;
     message?: string;
