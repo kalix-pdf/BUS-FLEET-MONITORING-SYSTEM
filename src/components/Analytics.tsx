@@ -26,9 +26,9 @@ export function Analytics() {
   const [isLoading, setIsLoading] = useState(true);
   const [allTrips, setAllTrips] = useState<Trip[]>([]);
   const [buses, setBuses] = useState<any[]>([]);
-  const [selectedRange, setSelectedRange] = useState('7 Days');
+  // const [selectedRange, setSelectedRange] = useState('7 Days');
 
-  const timeRanges = ['Today', '7 Days', '30 Days', 'Year'];
+  // const timeRanges = ['Today', '7 Days', '30 Days', 'Year'];
 
   useEffect(() => {
     loadAnalyticsData();
@@ -281,7 +281,7 @@ export function Analytics() {
             </div>
 
             {/* Time Range Selector */}
-            <div className="flex items-center gap-2 bg-white rounded-xl p-1 shadow-lg">
+            {/* <div className="flex items-center gap-2 bg-white rounded-xl p-1 shadow-lg">
               {timeRanges.map((range) => (
                 <button
                   key={range}
@@ -295,7 +295,7 @@ export function Analytics() {
                   {range}
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
