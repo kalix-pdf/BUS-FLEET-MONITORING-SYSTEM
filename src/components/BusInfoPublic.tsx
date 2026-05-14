@@ -104,9 +104,9 @@ export function BusInfoPublic({ busId, busqrCodeId, onClose }: BusInfoPublicProp
     }
   };
 
-  const calculateETA = () => {
-    return Math.floor(Math.random() * 10) + 3;
-  };
+  // const calculateETA = () => {
+  //   return Math.floor(Math.random() * 10) + 3;
+  // };
 
   if (loading) {
     return (
@@ -240,7 +240,7 @@ export function BusInfoPublic({ busId, busqrCodeId, onClose }: BusInfoPublicProp
                 <div>
                   <h3 className="text-gray-900 mb-1 sm:mb-2 text-base sm:text-lg">Bus Status</h3>
                   <p className="text-gray-600 text-sm capitalize">Driver: {busData.driver}</p> 
-                  {busStatus === 'on-time' && (<p className="text-gray-600 text-sm">ETA: {calculateETA()} mins</p>)}
+                  {/* {busStatus === 'on-time' && (<p className="text-gray-600 text-sm">ETA: {calculateETA()} mins</p>)} */}
                   <p className="text-gray-600 text-sm capitalize">Bus Status: {busStatus}</p>
                 </div>
                 <div
@@ -322,7 +322,7 @@ export function BusInfoPublic({ busId, busqrCodeId, onClose }: BusInfoPublicProp
                   <span className="text-lg sm:text-xl text-indigo-600">₱15</span>
                 </div>
                 <div className="flex items-start sm:items-center justify-between py-2 sm:py-3">
-                  <span className="text-gray-600 text-sm sm:text-base">Student Base Fare (-20% disc.)</span>
+                  <span className="text-gray-600 text-sm sm:text-base">20% Discount (Student / Senior / PWD)</span>
                   <span className="text-lg sm:text-xl text-indigo-600">₱12</span>
                 </div>
               </div>
